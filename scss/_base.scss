@@ -1,0 +1,37 @@
+@use "sass:color";
+
+body, html {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+@mixin button($type) {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: rgb(104, 104, 104);
+  background-image: linear-gradient(0deg, color.scale($deep-purple, $alpha: -10%) 0%, color.scale($pink, $alpha: -10%) 100%);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    background-color: white;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+$deep-purple: #9356DC;
+$pink: #FF79DA;
+$mint-green: #99E2D0;
+$light-purple: #f8ecfc;
+$appPadding: 1rem;
