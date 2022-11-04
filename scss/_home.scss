@@ -80,14 +80,6 @@
       &.icon3{
         color: $deep-purple !important;
       }
-      &:first-child {
-        margin-top: 0;
-      }
-  
-      &:last-child {
-        margin-bottom: 0;
-      }
-  
       &::before {
         counter-increment: compteListe 1;
         content: counter(compteListe) " ";
