@@ -41,9 +41,6 @@
     &__title {
       margin-top: 0;
     }
-  
-   
-  
     &__steps {
       margin: 0;
       padding: 0;
@@ -74,11 +71,10 @@
         }
       } 
       &.step3{
-      background-color: $light-purple ;
-        
+      background-color: $light-purple ; 
     }
-      &.icon3{
-        color: $deep-purple !important;
+      .icon3{
+        color: #9356DC !important;
       }
       &::before {
         counter-increment: compteListe 1;
@@ -107,9 +103,7 @@
     background-color: #f6f6f6;
     padding: ($appPadding + 1rem) $appPadding;
   
-    &__title {
-  
-    }
+    
   }
   
   .cards {
