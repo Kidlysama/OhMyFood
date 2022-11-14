@@ -65,6 +65,51 @@ body, html {
   margin-right: 0.5rem;
 }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #f8ecfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 85%;
+  -webkit-animation: finish 0.1s;
+          animation: finish 0.1s;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.loader span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin: 150px auto;
+  background: #99E2D0;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -webkit-animation: bubbly 1s;
+          animation: bubbly 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+.loader span#bubble2 {
+  opacity: 100%;
+  background: #9356DC;
+  -webkit-animation-delay: 0.27s;
+          animation-delay: 0.27s;
+}
+.loader span#bubble3 {
+  opacity: 100%;
+  background: #FF79DA;
+  -webkit-animation-delay: 0.54s;
+          animation-delay: 0.54s;
+}
+
 .local {
   display: flex;
   justify-content: center;
@@ -377,13 +422,13 @@ body, html {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  -webkit-animation: itemappears 0.6s;
-          animation: itemappears 0.6s;
+  -webkit-animation: itemAppear 0.6s;
+          animation: itemAppear 0.6s;
   -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
           animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  transform: scale(1);
+  transform: scale(0);
   max-width: 100%;
 }
 .menuItem__header {
@@ -441,6 +486,51 @@ body, html {
   color: #99E2D0;
 }
 
+.delay-0 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.delay-1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.delay-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.delay-3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delay-4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delay-5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay-6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.delay-7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.delay-8 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
 .wrapBtn {
   display: flex;
   text-decoration: none;
@@ -469,4 +559,74 @@ body, html {
 .commandBtn a {
   text-decoration: none;
   color: inherit;
+}
+
+@-webkit-keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*  
+  @keyframes loader {
+    100% {
+      opacity: 0;
+      z-index: -10;
+    }
+  } 
+
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(0.5rem);
+    }
+    75% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+    // 0% {
+    //   transform: translateY(0);
+    // }
+  }*/
+/* Bubbles */
+@-webkit-keyframes finish {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes finish {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@-webkit-keyframes bubbly {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0.1;
+    transform: translateY(-32px);
+  }
 }/*# sourceMappingURL=main.css.map */

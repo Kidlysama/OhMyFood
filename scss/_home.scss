@@ -1,3 +1,45 @@
+
+.loader{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: $light-purple;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  z-index: 10000;
+  opacity: 85%;
+  animation: finish .1s  ;
+  animation-delay: 1.75s;
+   animation-fill-mode: both;
+  
+  & span{
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin: 150px auto;
+  background: $mint-green;
+  @include border-radius(50%);
+  animation: bubbly  1s  ;
+  animation-iteration-count: 1;
+ 
+  
+  &#bubble2{
+    opacity: 100%;
+  background: $deep-purple;
+  animation-delay: .27s;
+}
+  &#bubble3{
+  opacity: 100%;
+  background:$pink;
+  animation-delay: .54s;
+}
+}
+}
+
+
+
 .local {
     display: flex;
     justify-content: center;

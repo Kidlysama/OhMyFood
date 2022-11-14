@@ -35,6 +35,14 @@ $pink: #FF79DA;
 $mint-green: #99E2D0;
 $light-purple: #f8ecfc;
 $appPadding: 1rem;
+$bg: #FDF6E3;
+$terra-rosa: #FE576C;
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
 
 .container {
   max-width: 1280px;
