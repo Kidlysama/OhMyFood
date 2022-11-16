@@ -10,7 +10,7 @@
   z-index: 10000;
   opacity: 85%;
   animation: finish .1s  ;
-  animation-delay: 1.75s;
+  animation-delay: 1s;
    animation-fill-mode: both;
   
   & span{
@@ -21,7 +21,7 @@
   margin: 150px auto;
   background: $mint-green;
   @include border-radius(50%);
-  animation: bubbly  1s  ;
+  animation: bubbly  .5s  ;
   animation-iteration-count: 1;
  
   
@@ -144,7 +144,7 @@
   .restaurants {
     background-color: #f6f6f6;
     padding: ($appPadding + 1rem) $appPadding;
-  
+    
     
   }
   
